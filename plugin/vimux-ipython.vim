@@ -25,6 +25,6 @@ function! VimuxSetRunnerIndex(n)
     let g:VimuxRunnerIndex = a:n
 endfunction
 
-command! -nargs=* SetVimuxRunnerIndex :call SetVimuxRunnerIndex(<args>)
-vmap <silent> <localleader>r :python send_to_tmux()<cr>
-nmap <silent> <localleader>r :python run_current_file_in_ipython()<cr>
+command! -nargs=* VimuxSetRunnerIndex :call VimuxSetRunnerIndex(<args>)
+vnoremap <silent> <localleader>r :python send_to_tmux()<cr>
+nnoremap <silent> <localleader>r :python run_current_file_in_ipython()<cr>
