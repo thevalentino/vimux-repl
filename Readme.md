@@ -1,4 +1,4 @@
-# vimux-ipython
+# vimux-repl
 
 
 ## Installation
