@@ -14,8 +14,8 @@ class VimuxIPython(object):
             counter += 1
         return counter
 
-    @neovim.command('VimuxSendTextToTmux', range='', nargs='*', sync=True)
-    def send_selected_text_to_tmux(self, args, range):
+    @neovim.command('VimuxSendTextToIpython', range='', nargs='*', sync=True)
+    def send_selected_text_to_ipython(self, args, range):
         start, end = range
         buf = self.vim.current.buffer
         first_line = buf[start-1]
