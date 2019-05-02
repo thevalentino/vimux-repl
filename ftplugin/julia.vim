@@ -10,4 +10,6 @@ endfunction
 
 nnoremap <buffer> <silent> <leader>R :call VimuxSendKeys("C-l")<cr>:VimuxRunCommand("include(\"" . expand("%:p") . "\")")<cr>
 nnoremap <buffer> <silent> <leader>r :VimuxRunCommand("include(\"" . expand("%:p") . "\")")<cr>
+nnoremap <buffer> <silent> <leader>K :call VimuxSendKeys("C-d")<cr>:call VimuxSendText("julia\n")<cr>
 vnoremap <buffer> <silent> <leader>r :call VimuxSendTextToJuliaREPL()<cr>
+
