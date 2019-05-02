@@ -1,7 +1,14 @@
 " For the following function to work properly, it is necessary to
 " do the following in the Julia REPL:
 " julia> Base.active_repl.options.auto_indent = false
-" That line can also be added to the juliarc file.
+"
+" Alternatively, the following code can be added to
+" ~/.julia/config/startup.jl
+"
+" import REPL
+" atreplinit() do repl
+"     repl.options.auto_indent = false
+" end
 "
 function! VimuxSendTextToJuliaREPL() range
     let fulltext = join(getline(a:firstline, a:lastline), "\n") . "\n"
